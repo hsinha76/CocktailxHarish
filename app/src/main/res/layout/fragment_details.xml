@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.view.fragments.DetailsFragment">
+
+    <!-- Initial Loading -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/view_loading"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loader" />
+
+    <!-- Details -->
+    <RelativeLayout
+        android:id="@+id/view_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/view_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/img_header_meal"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription,UnusedAttribute"
+                tools:src="@mipmap/ic_launcher" />
+
+            <ImageButton
+                android:id="@+id/img_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                android:padding="4dp"
+                android:src="@drawable/baseline_arrow_back_24"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+        <!-- Primary Details -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/view_primary_details"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/view_header"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="-60dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_meal_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-black"
+                    android:singleLine="true"
+                    android:textColor="@color/text_primary"
+                    android:textSize="20sp"
+                    tools:text="Sample Header Text" />
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="22dp"
+                    android:layout_marginTop="2dp"
+                    android:drawablePadding="4dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center|bottom"
+                    android:singleLine="true"
+                    android:textColor="@color/text_light"
+                    android:textSize="14sp"
+                    app:drawableStartCompat="@drawable/categoryicon"
+                    app:drawableTint="@color/drawable"
+                    tools:text="Rum" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_primary_details">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Instructions -->
+                <RelativeLayout
+                    android:id="@+id/view_instructions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="28dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_header_instructions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/instructions"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_meal_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_header_instructions"
+                        android:layout_marginVertical="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="start|center"
+                        android:padding="4dp"
+                        android:textColor="@color/text_light"
+                        android:textSize="14sp"
+                        tools:text="Sample Description Text" />
+
+                </RelativeLayout>
+
+                <!-- Ingredients -->
+                <RelativeLayout
+                    android:id="@+id/view_ingredients"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="28dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_header_ingredients"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/ingredients"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_ingredients"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_header_ingredients"
+                        android:layout_marginVertical="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="start|center"
+                        android:orientation="vertical"
+                        android:padding="4dp"
+                        android:textColor="@color/text_light"
+                        android:textSize="14sp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="4"
+                        tools:listitem="@layout/item_ingredients"
+                        tools:text="Sample Description Text" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>

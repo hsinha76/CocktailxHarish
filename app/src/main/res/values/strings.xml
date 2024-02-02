@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CocktailxHarish</string>
+    <string name="let_s_eat_nquality_food">Let\'s eat\nQuality food</string>
+    <string name="search">Search</string>
+    <string name="near_restaurant">Near Restaurant</string>
+    <string name="see_all">See All</string>
+    <string name="blue_restaurant">Blue Restaurant</string>
+    <string name="_10_00am_03_30pm">10:00AM - 03:30PM</string>
+    <string name="steve_st_road">Steve ST Road</string>
+    <string name="_4_5">4.5 ⭐️</string>
+    <string name="something_went_wrong">Something went wrong 😢</string>
+    <string name="instructions">Instructions</string>
+    <string name="ingredients">Ingredients</string>
+</resources>

@@ -1,0 +1,58 @@
+package com.hsdroid.cocktailxharish.data.models
+
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+import kotlinx.parcelize.RawValue
+
+@Parcelize
+data class Drink(
+    val dateModified: String?,
+    val idDrink: String?,
+    val strAlcoholic: String?,
+    val strCategory: String?,
+    val strCreativeCommonsConfirmed: String?,
+    val strDrink: String?,
+    val strDrinkAlternate: @RawValue Any?,
+    val strDrinkThumb: String?,
+    val strGlass: String?,
+    val strIBA: @RawValue Any?,
+    val strImageAttribution: @RawValue Any?,
+    val strImageSource: String?,
+    val strIngredient1: String?,
+    val strIngredient10: @RawValue Any?,
+    val strIngredient11: @RawValue Any?,
+    val strIngredient12: @RawValue Any?,
+    val strIngredient13: @RawValue Any?,
+    val strIngredient14: @RawValue Any?,
+    val strIngredient15: @RawValue Any?,
+    val strIngredient2: String?,
+    val strIngredient3: String?,
+    val strIngredient4: String?,
+    val strIngredient5: String?,
+    val strIngredient6: String?,
+    val strIngredient7: @RawValue Any?,
+    val strIngredient8: @RawValue Any?,
+    val strIngredient9: @RawValue Any?,
+    val strInstructions: String?,
+    val strInstructionsDE: String?,
+    val strInstructionsES: @RawValue Any?,
+    val strInstructionsFR: @RawValue Any?,
+    val strInstructionsIT: String?,
+    val strMeasure1: String?,
+    val strMeasure10: @RawValue Any?,
+    val strMeasure11: @RawValue Any?,
+    val strMeasure12: @RawValue Any?,
+    val strMeasure13: @RawValue Any?,
+    val strMeasure14: @RawValue Any?,
+    val strMeasure15: @RawValue Any?,
+    val strMeasure2: String?,
+    val strMeasure3: String?,
+    val strMeasure4: String?,
+    val strMeasure5: String?,
+    val strMeasure6: String?,
+    val strMeasure7: String?,
+    val strMeasure8: @RawValue Any?,
+    val strMeasure9: @RawValue Any?,
+    val strTags: @RawValue Any?,
+    val strVideo: @RawValue Any?
+) : Parcelable
